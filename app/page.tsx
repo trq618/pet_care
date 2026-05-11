@@ -241,7 +241,7 @@ export default function Home() {
                   <li>按生活习惯定制造型</li>
                 </ul>
                 <div className="price">
-                  <strong>¥338 起</strong>
+                  <strong>¥598 起</strong>
                   <span>约 2-3 小时</span>
                 </div>
               </article>
