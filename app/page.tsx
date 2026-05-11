@@ -332,11 +332,10 @@ export default function Home() {
                 <span>上海市静安区青云路 88 号 1F</span>
               </div>
               <div className="store-map" aria-label="上海市静安区青云路 88 号 1F 地图">
-                <iframe
-                  title="毛球护理所门店地图"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=121.4663%2C31.2595%2C121.4807%2C31.2689&layer=mapnik&marker=31.2642%2C121.4735"
+                <img
+                  className="store-map-image"
+                  src="/assets/store-map-ai.png"
+                  alt="上海静安门店周边简约地图"
                 />
                 <a
                   className="map-link"
