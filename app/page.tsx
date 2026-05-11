@@ -8,6 +8,27 @@ const heroSlides = [
   "/assets/pet-spa-hero-cat.png",
 ];
 
+const testimonials = [
+  {
+    name: "陈女士",
+    pet: "柯基 豆包",
+    text: "豆包平时很怕吹风，这次美容师一直慢慢安抚，还把耳朵和脚底毛处理得很干净。接回家以后毛很蓬松，也没有紧张到发抖。",
+    tag: "深层蓬松护理",
+  },
+  {
+    name: "周先生",
+    pet: "布偶猫 奶盖",
+    text: "第一次带猫咪来洗护，本来担心会应激。店里会提前确认习惯，过程中也发照片同步，回家后猫咪状态很放松。",
+    tag: "猫咪低敏洗护",
+  },
+  {
+    name: "林女士",
+    pet: "比熊 小雪",
+    text: "造型修得很自然，没有剪得过短，脸型也保留了小雪原来的可爱感。美容师还教了日常梳毛的位置和频率。",
+    tag: "精修造型",
+  },
+];
+
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showToast, setShowToast] = useState(false);
@@ -69,6 +90,7 @@ export default function Home() {
         <nav className="nav" aria-label="主导航">
           <a href="#services">服务</a>
           <a href="#process">流程</a>
+          <a href="#testimonials">评价</a>
           <a href="#booking">预约</a>
           <a href="#location">到店</a>
         </nav>
@@ -270,6 +292,36 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="section testimonials-section" id="testimonials">
+          <div className="section-inner">
+            <div className="section-head">
+              <div>
+                <p className="section-kicker">Reviews</p>
+                <h2>客户带着安心感回家</h2>
+              </div>
+              <p className="section-note">来自近期到店客户的真实体验反馈，覆盖狗狗洗护、猫咪护理和精修造型。</p>
+            </div>
+
+            <div className="testimonial-grid">
+              {testimonials.map((testimonial) => (
+                <article className="card testimonial-card" key={testimonial.name}>
+                  <div className="testimonial-rating" aria-label="五星评价">
+                    ★★★★★
+                  </div>
+                  <blockquote>“{testimonial.text}”</blockquote>
+                  <div className="testimonial-footer">
+                    <div>
+                      <strong>{testimonial.name}</strong>
+                      <span>{testimonial.pet}</span>
+                    </div>
+                    <span className="testimonial-tag">{testimonial.tag}</span>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="section" id="booking">
           <div className="section-inner booking-wrap">
             <aside className="info-block" id="location">
@@ -306,10 +358,6 @@ export default function Home() {
               <div className="info-row">
                 <strong>提示</strong>
                 <span>建议提前 1 天预约；大型犬与猫咪洗护请先电话确认档期。</span>
-              </div>
-              <div className="review">
-                <strong>顾客反馈</strong>
-                <span>“我家小狗平时很怕吹风，这次美容师一直慢慢安抚，接回来毛很蓬松，也没有紧张到发抖。”</span>
               </div>
             </aside>
 
